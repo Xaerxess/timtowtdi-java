@@ -1,0 +1,31 @@
+#timtowtdi img {
+    max-width: 593px;
+}
+.reveal em {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+.reveal .invisible-fragment {
+    display: none;
+}
+.reveal section img {
+    border: 0;
+}
+.reveal .section-images img {
+    max-height: 300px;
+}
+.reveal blockquote {
+    width: 80%;
+    padding: 20px;
+}
+.reveal blockquote footer {
+    font-size: 0.8em;
+}
+.reveal i.fa {
+    font-family: FontAwesome;
+    font-style: normal;
+}
+.reveal .a-bit-smaller {
+    font-size: 0.7em;
+    line-height: 1em;
+}

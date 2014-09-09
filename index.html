@@ -15,7 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -40,68 +42,676 @@
 
     <div class="reveal">
 
-      <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
 
-        <section id="transitions">
-          <h2>Transition Styles</h2>
-          <p>
-            You can select from different transitions, like: <br>
-            <a href="?transition=cube#/transitions">Cube</a> -
-            <a href="?transition=page#/transitions">Page</a> -
-            <a href="?transition=concave#/transitions">Concave</a> -
-            <a href="?transition=zoom#/transitions">Zoom</a> -
-            <a href="?transition=linear#/transitions">Linear</a> -
-            <a href="?transition=fade#/transitions">Fade</a> -
-            <a href="?transition=none#/transitions">None</a> -
-            <a href="?#/transitions">Default</a>
-          </p>
-        </section>
+        <section id="start">
 
-        <section id="themes">
-          <h2>Themes</h2>
-          <p>
-            Reveal.js comes with a few themes built in: <br>
-            <a href="?#/themes">Default</a> -
-            <a href="?theme=sky#/themes">Sky</a> -
-            <a href="?theme=beige#/themes">Beige</a> -
-            <a href="?theme=simple#/themes">Simple</a> -
-            <a href="?theme=serif#/themes">Serif</a> -
-            <a href="?theme=night#/themes">Night</a> <br>
-            <a href="?theme=moon#/themes">Moon</a> -
-            <a href="?theme=solarized#/themes">Solarized</a>
-          </p>
-          <p>
+          <section>
+            <h1><strong>TIMTOWTDI and Java</strong></h1>
+            <h2 class="fragment">(and not only Java!)</h2>
+            <p>Grzegorz Rożniecki (<a href="https://twitter.com/xaerxess">@xaerxess</a>)</p>
+          </section>
+
+          <section id="about_me" data-transition="none">
+            <h2>About me</h2>
+            <p>Java / Perl / JavaScript developer</p>
+            <p class="fragment">Software reader / writer</p>
+            <p><i class="fa fa-home"></i> <a href="http://xaerxess.pl">xaerxess.pl</a></p>
+            <p><i class="fa fa-twitter"></i> <a href="https://twitter.com/xaerxess">@xaerxess</a></p>
+            <p><i class="fa fa-github"></i> <a href="https://github.com/Xaerxess">Xaerxess</a></p>
+          </section>
+
+          <section id="about_talk">
+            <h2>About this talk</h2>
+            <p><a href="https://github.com/Xaerxess/timtowtdi-java">Available on GitHub</a></p>
+            <img src="images/qrcode.png">
             <small>
-              * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+              <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
             </small>
-          </p>
+          </section>
+
+          <section data-transition="none">
+            <h3>Programming languages I use</h3>
+            <ul>
+              <li class="fragment">Java <span class="fragment current-visible">(obviously)</span></li>
+              <li class="fragment">JavaScript <span class="fragment current-visible">(only good parts)</span></li>
+              <li class="fragment">Perl <span class="fragment current-visible">(FTW!)</span></li>
+              <li class="fragment">Python <span class="fragment current-visible">(and TIMTOWTDI?)</span></li>
+              <li class="fragment">PHP <span class="fragment current-visible">(...)</span></li>
+            </ul>
+            <aside class="notes" data-markdown>
+              - Will this talk be about programming languages? Not really.
+              - A bit about good practices and how treat experience from other languages.
+              - Something about good design (**IMO**).
+            </aside>
+          </section>
+
         </section>
 
         <section>
-          <h2>Pretty Code</h2>
-          <pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
 
-    var nodes = document.querySelectorAll( selector );
+          <section id="timtowtdi">
+            <h1><strong>TIMTOWTDI</strong></h1>
+            <p class="fragment current-visible">There is more than one way to do it</p>
+            <p class="fragment"><em>Tim Toady</em></p>
+            <aside class="notes" data-markdown>
+              - Tim Toady - Larry Wall
+            </aside>
+          </section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+          <!-- <section> -->
+          <!--   <h1><strong>JASNIKT</strong></h1> -->
+          <!--   <p class="fragment current-visible">Jeden albo więcej sposobów na implemetentację każdej t...</p> -->
+          <!--   <p class="fragment"><em>Jaś Nikt</em></p> -->
+          <!-- </section> -->
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+          <section data-transition="none">
+            <img src="images/programming_perl_timtowtdi.jpg" alt="Programming Perl">
+          </section>
+
+          <section data-transition="none">
+            <img src="images/programming_perl.png" alt="Programming Perl">
+          </section>
+
+          <section data-transition="none">
+            <img src="images/timtowtdi.png" alt="Programming Perl TIMTOWTDI">
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="tim_toady_why">
+            <blockquote>
+              &quot;The very fact that <strong>it's possible to write messy programs in Perl</strong> is also what makes it possible to write programs that are cleaner in Perl than they could ever be in a language that attempts to enforce cleanliness. <strong>The potential for greater good goes right along with the potential for greater evil.</strong>&quot;
+              <footer>- <cite>Larry Wall, Perl creator</cite></footer>
+            </blockquote>
+          </section>
+
+          <section>
+            <h2>Why?</h2>
+            <img class="fragment" src="images/flexible_cat.jpg" alt="Flexible cat">
+            <img class="fragment" src="images/power.jpg" alt="Jeremy: Powaaah!">
+          </section>
+
+          <section data-transition="none">
+            <h2>Tim Toady in practice</h2>
+            <em class="fragment">What's goalkeeper for?</em>
+            <img class="fragment" src="images/schmeichel.jpg" alt="Champions League Final 1999 - Peter Schmeichel">
+          </section>
+
+          <section data-transition="none">
+            <h2>Tim Toady in practice</h2>
+            <em>What's goalkeeper for?</em>
+            <img src="images/sheringham.jpg" alt="Champions League Final 1999 - Teddy Sheringham">
+          </section>
+
+          <section data-transition="none">
+            <h2>Tim Toady in practice</h2>
+            <em class="fragment">What's goalkeeper for?</em>
+            <img class="fragment" src="images/neuer.jpg" alt="World Cup 2014 - Michael Neuer">
+          </section>
+
+          <section data-transition="none">
+            <h2>Tim Toady in practice</h2>
+            <em>What's goalkeeper for?</em>
+            <img src="images/fred_vs_neuer.png" alt="World Cup 2014 - Michael Neuer">
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="bjarne" data-transition="none">
+            <blockquote>
+              "There are only two kinds of languages: the ones people complain about and the ones nobody uses"
+              <footer>- <cite>Bjarne Stroustrup, C++ creator</cite></footer>
+            </blockquote>
+          </section>
+
+          <section data-transition="none">
+            <blockquote>
+              "There are only <code>10</code> kinds of languages: the ones people complain about and the ones nobody uses"
+              <footer>- <cite>Bjarne Stroustrup, C++ creator</cite></footer>
+            </blockquote>
+          </section>
+
+          <section data-transition="none">
+            <img src="images/binary.jpg" alt="Programming joke fail">
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="perl" data-transition="none">
+            <h2>Perl doing For Loop</h2>
+            <pre><code data-trim contenteditable>
+for (my $i = 0; $i <= 3; ++$i) {
+    print $i;
+}
+            </code></pre>
+          </section>
+
+          <section data-transition="none">
+            <h2>Perl doing For Loop</h2>
+            <pre><code data-trim contenteditable>
+for my $i (0..3) {
+    print $i;
+}
+            </code></pre>
+          </section>
+
+          <section data-transition="none">
+            <h2>Perl doing For Loop</h2>
+            <pre><code data-trim contenteditable>
+for (0..3) {
+    print $_;
+}
+            </code></pre>
+          </section>
+
+          <section data-transition="none">
+            <h2>Perl doing For Loop</h2>
+            <pre><code data-trim contenteditable>
+for (0..3) {
+    print;
+}
+            </code></pre>
+          </section>
+
+          <section data-transition="none">
+            <h2>Perl doing For Loop</h2>
+            <pre><code data-trim contenteditable>
+print for (0..3);
+            </code></pre>
+          </section>
+
+          <!-- <section> -->
+          <!--   <a href="https://metacpan.org/pod/distribution/perlsecret/lib/perlsecret.pod">Perl secret operators - <i>perlsecret</i></a> -->
+          <!-- </section> -->
+
+        </section>
+
+        <section>
+
+          <section id="esr">
+            <blockquote>
+              &quot;&laquo;More than one way to do it&raquo; lent flavor and expressiveness at a small scale, but made it significantly harder to maintain consistent style across a wider code base.&quot;
+              <footer>- <cite>Eric Raymond (ESR) - in <a href="http://www.linuxjournal.com/article/3882"><i>Why Python</i></a> from 2000</cite></footer>
+            </blockquote>
+            <aside class="notes" data-markdown>
+              Perl, of course, is the 800-pound gorilla of modern scripting languages. It has largely replaced shell as the scripting language of choice for system administrators, thanks partly to its comprehensive set of UNIX library and system calls, and partly to the huge collection of Perl modules built by a very active Perl community. The language is commonly estimated to be the CGI language behind about 85% of the “live” content on the Net. Larry Wall, its creator, is rightly considered one of the most important leaders in the Open Source community, and often ranks third behind Linus Torvalds and Richard Stallman in the current pantheon of hacker demigods.
+            </aside>
+          </section>
+
+          <section>
+            <h2>Python Zen</h2>
+            <p>
+              <em>There should be one<br>
+                - and preferably only one - <br>
+                obvious way to do it
+              </em>
+            </p>
+            <aside class="notes" data-markdown>
+              - No shortcut for that and no fancy pronounciation - that'll be another way to say the phrase!
+            </aside>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="linguistic_relativity">
+            <h2>Linguistic relativity</h2>
+            <p class="fragment" data-fragment-index="1">vs</p>
+            <h2 class="fragment" data-fragment-index="1">Universal grammar</h2>
+            <aside class="notes" data-markdown>
+              - In class we discussed Chomsky's concept of Universal Grammar and contrasted it with the Sapir-Whorf Hypothesis, otherwise known as the principle of linguistic relativity. Whereas the universal grammar hypothesis posits that the underlying structure of the human brain determines (or at least constrains) the human capacity for language, which is why all languages share a set of characteristics that are true of all languages, extreme linguistic relativity suggests that language itself limits (or at least influences) the ways in which language speakers conceptualize their world and this affects their cognitive processes.
+                - Strong: language **determines** thought and linguistic categories limit and determine cognitive categories
+                - Weak: linguistic categories and usage **influence** thought and behavior, both linguistic and non-linguistic
+              - http://gallivananth1102.blogspot.com/2014/02/universal-grammar-or-linguistic.html
+            </aside>
+          </section>
+
+          <section id="sapir_whorf">
+            <h2>Sapir–Whorf hypothesis</h2>
+            <img class="fragment" data-fragment-index="1" src="images/sapir.jpg" alt="Edward Sapir">
+            <img class="fragment" data-fragment-index="1" src="images/whorf.jpg" alt="Benjamin Lee Whorf">
+            <aside class="notes" data-markdown>
+              - Franz Boas - snow
+              - Edward Sapir - cognitive science basics, phoneme
+              - Benjamin Lee Whorf prowadził badania głównie języków Majów i Hopi. W tekście Model uniwersum Indian, który napisał najprawdopodobniej w roku 1936, zawarł tezę, że system używania czasowników w języku hopi wpływa na pojmowanie przez Indian czasu i przestrzeni. Zaprzeczał on przede wszystkim, że istnieje jedno uniwersalne pojmowanie czasu i przestrzeni. Język hopi określał jako &quot;język pozbawiony czasu&quot; i przeciwstawiał go językom &quot;temporalnym&quot;.
+            </aside>
+          </section>
+
+          <section id="language_relativity">
+            <img src="images/language_relativity.jpg" alt="Congnitive science">
+          </section>
+
+          <section data-transition="none">
+            <h2>Perl</h2>
+            <h2 class="fragment current-visible">?</h2>
+            <p class="fragment">Created in 1987 (Perl 5 released in 1994), for system administrators, while Larry Wall was working for NASA</p>
+          </section>
+
+          <section data-transition="none">
+            <h2>Java</h2>
+            <h2 class="fragment current-visible">?</h2>
+            <p class="fragment">Created in 1991, released in 1995, &quot;for write once, run anywhere&quot; applications, while James Gosling was working for Sun</p>
+          </section>
+
+          <section data-transition="none">
+            <h2>JavaScript</h2>
+            <h2 class="fragment current-visible">!</h2>
+            <p class="fragment">Created in 1995, while Brendan Eich was working for client-side scripts</p>
+          </section>
+
+        </section>
+
+        <section id="javascript">
+          <h2>JS - for loop (with DOM)</h2>
+          <p class="fragment current-visible">Tim Toady?</p>
+          <pre><code contenteditable>
+for (var i = 0; i &lt; array.length; i++) {
+  var element = document.getElementById('element');
+  element.innerText += '[' + i + ':' + array[i] + ']';
 }
           </code></pre>
-          <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+          <aside class="notes" data-markdown>
+            - Maybe getElementById outside loop?
+            - Famous length in loop
+            - There's hoisting, so...
+            - Maybe go [idiomatic](https://github.com/rwaldron/idiomatic.js)?
+          </aside>
+        </section>
+
+        <section id="consistency">
+          <h2>TIMTOWTDI</h2>
+          <h2 class="fragment grow"><strong>BSCINABTE</strong></h2>
+          <p class="fragment current-visible">There’s more than one way to do it<br>
+            <strong>but sometimes consistency is not a bad thing either</strong></p>
+          <div class="fragment">
+            <h2>Tim Toady</h2>
+            <h2><strong>Bicarbonate</strong></h2>
+          </div>
+        </section>
+
+        <section>
+
+          <section id="standards">
+            <h2>Standards</h2>
+            <blockquote>
+              People like rules and guidelines. Thet like to agree with them, or to argue with them.
+              <footer class="fragment">- <cite>Grzegorz Rożniecki, for purpose of this talk</cite></footer>
+            </blockquote>
+          </section>
+
+          <section data-transition="none">
+            <img src="images/tabs_spaces_both.png" alt="Tabs vs Spaces">
+            <aside class="notes" data-markdown>
+              - http://programmers.stackexchange.com/questions/157277/indentation-is-there-any-evidence-to-show-whether-2-or-4-spaces-is-more-readabl
+              - http://webcache.googleusercontent.com/search?q=cache:P5afiEgnEKwJ:www.cl.cam.ac.uk/teaching/1314/P201/ppig-book/ch1-5.pdf+&cd=5&hl=en&ct=clnk&gl=pl
+              - http://blog.codinghorror.com/death-to-the-space-infidels/
+            </aside>
+          </section>
+
+          <section data-transition="none">
+            <img src="images/emacs_vim_atom.png" alt="Emacs vs Vim">
+          </section>
+
+          <section>
+            <p><s>Inconsistency</s></p>
+            <img src="images/inconsistency.jpg" alt="Emacs vs Vim">
+            <p class="fragment"><s>TIMTOWTDI?</s></p>
+          </section>
+
+        </section>
+
+        <section id="java">
+          <h2>Java and TIMTOWTDI</h2>
+          <p class="fragment current-visible"><small>finally...</small></p>
+          <ul>
+            <li class="fragment">simple syntax</li>
+            <li class="fragment">stable and battle tested</li>
+            <li class="fragment">JVM</li>
+            <li class="fragment">has many <strong>coding standards</strong></li>
+            <li class="fragment">has some <strong>best practices</strong></li>
+          </ul>
+          <p class="fragment"><i>but...</i></p>
+          <ul>
+            <li class="fragment">verbose syntax</li>
+            <li class="fragment">backwards compatibility</li>
+            <li class="fragment">JVM languages are not Java</li>
+            <li class="fragment">has <strong>many</strong> coding standards</li>
+            <li class="fragment">has <strong>some</strong> best practices</li>
+          </ul>
+
+        </section>
+
+        <section>
+
+          <section id="java_syntax">
+            <h2>Java syntax</h2>
+          </section>
+
+          <section>
+            <pre><code data-trim>
+final class Person {
+
+  private final String name;
+  private final Integer age;
+
+  public Person(String name, Integer age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public Integer getAge() {
+    return age;
+  }
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((age == null) ? 0 : age.hashCode());
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    return result;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Person other = (Person) obj;
+    if (age == null) {
+      if (other.age != null)
+        return false;
+    } else if (!age.equals(other.age))
+      return false;
+    if (name == null) {
+      if (other.name != null)
+        return false;
+    } else if (!name.equals(other.name))
+      return false;
+    return true;
+  }
+
+  @Override
+  public String toString() {
+    return "Person [name=" + name + ", age=" + age + "]";
+  }
+
+}
+            </code></pre>
+            vs
+            <pre><code data-trim>
+final case class Person(name: String, age: Int)
+            </code></pre>
+          </section>
+
+          <section>
+            <p>Java 7+: <code>Objects</code><br>
+              Java &lt; 7 - Guava: <code>Objects</code></p>
+            <pre><code>
+  @Override
+  public int hashCode() {
+    return Objects.hash(name, age);
+  }
+
+  @Override
+  public boolean equals(final Object obj) {
+    if (this == obj)
+      return true;
+    if (!(obj instanceof Person))
+      return false;
+    final Person other = (Person) obj;
+    return Objects.equals(this.name, other.name)
+        && Objects.equals(this.age, other.age);
+  }
+            </code></pre>
+            <p class="fragment">Better?</p>
+          </section>
+
+          <section>
+            <p>Guava 18+: <code>MoreObjects.toStringHelper</code><br>
+              Guava &lt; 18: <code>Objects.toStringHelper</code></p>
+            <pre><code class="java">
+  @Override
+  public String toString() {
+    return MoreObjects.toStringHelper(this)
+        .add("name", name)
+        .add("age", age)
+        .toString();
+  }
+            </code></pre>
+            <p class="fragment" data-fragment-index="1">Also better?</p>
+            <pre class="fragment" data-fragment-index="1"><code class="java">
+  @Override
+  public String toString() {
+    return "Person [name=" + name + ", age=" + age + "]";
+  }
+            </code></pre>
+          </section>
+
+          <section>
+            <p>Lombok: <code>@Value</code></p>
+            <pre><code class="java">
+@Value public class Person {
+  String name;
+  Integer age;
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <p><s>Lombok: black magic</s></p>
+            <img src="images/voodoo.jpg" alt="Black magic">
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="java_legacy">
+            <h2>Java legacy</h2>
+          </section>
+
+          <section class="a-bit-smaller">
+            <p>
+              <em>You should prefer <code>List&lt;Foo&gt;</code> over <code>Foo[]</code> whenever possible.</em>
+              <ul>
+                <li>A collection can be mutable or immutable. A nonempty array must always be mutable.</li>
+                <li>A collection can be thread-safe; even concurrent. An array is never safe to publish to multiple threads.</li>
+                <li>A collection can allow or disallow null elements. An array must always permit null elements.</li>
+                <li>A collection is type-safe; an array is not. Because arrays &quot;fake&quot; covariance, <code>ArrayStoreException</code> can result at runtime.</li>
+                <li>A collection can hold a non-reifiable type (e.g. <code>List&lt;Class&lt;? extends E&gt;&gt;</code> or <code>List&lt;Optional&lt;T&gt;&gt;</code>). With an array you get compilation warnings and confusing runtime exceptions.</li>
+                <li>A collection has a fully fleshed-out API; an array has only set-at-index, get-at-index and length.</li>
+                <li>A collection can have views (unmodifiable, subList, filter...). No such luck for an array.</li>
+                <li>A list or set's <code>equals</code>, <code>hashCode</code> and <code>toString</code> methods do what users expect; those methods on an array do anything but what you expect -- a common source of bugs.</li>
+                <li>Because of all the reasons above, third-party libraries like Guava won't bother adding much additional support for arrays, focusing only on collections, so there is a network effect.</li>
+              </ul>
+              <footer>- <cite>Kevin Bourrillion, lead Guava developer <a href="http://stackoverflow.com/a/6105705/708434">on StackOverflow</a></cite></footer>
+            </p>
+          </section>
+
+          <section>
+            <p>So, why would you ever use object arrays?</p>
+            <ul>
+              <li>have to interact with an API that uses them, and you can't fix that API</li>
+              <ul><li>convert to/from a List as close to that API as you can</li></ul>
+              <li>have a reliable benchmark that shows you're actually getting better performance with them</li>
+              <ul><li>benchmarks can lie, and often do</li></ul>
+              <li>can't think of any other reasons</li>
+            </ul>
+            <footer>- <cite>Kevin Bourrillion, <a href="http://stackoverflow.com/a/6105705/708434">also there</a></cite></footer>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="jvm">
+            <h2>JVM languages</h2>
+              <ul>
+                <li class="fragment">JVM is great!</li>
+                <li class="fragment">Scala, Clojure, Jython, JRuby</li>
+                <li class="fragment">...but employers don't trust them...</li>
+                <li class="fragment">...and there's big need for Java devs, not JVM-based devs</li>
+                <li class="fragment">:-(</li>
+              </ul>
+            <aside class="notes" data-markdown>
+              - Searching for the holy grail?
+            </aside>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="coding_standards">
+            <h2>Coding standards</h2>
+          </section>
+
+          <section data-markdown>
+            As said before - be consistent in your team.
+            <aside class="notes">
+              https://google-styleguide.googlecode.com/svn/trunk/javaguide.html
+            </aside>
+          </section>
+
+          <section>
+            <p>Ex. onsistent Eclipse preferences</p>
+            <p>To <code>final</code> or not to <code>final</code></p>
+            <img class="fragment" src="images/final_battle.jpg" alt="Final battle">
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="best_practices">
+            <h2>Best practices</h2>
+          </section>
+
+          <section data-markdown>
+            - Always override hashCode when you override equals
+            - Minimize mutability
+            - Design and document for inheritance or else prohibit it
+            - Prefer lists to arrays
+            - Know and use the libraries
+
+            _Sounds familiar?_ <!-- .element: class="fragment" data-fragment-index="1" -->
+          </section>
+
+          <section>
+            <img src="images/effective_java.jpg" alt="Effective Java">
+          </section>
+
+        </section>
+
+        <section>
+
+          <section id="my_best_practices">
+            <h2>My best practices</h2>
+          </section>
+
+          <section>
+            <ul>
+              <li class="fragment">Read a lot
+                <ul class="fragment">
+                  <li>books about programming</li>
+                  <li>technical blogs and articles</li>
+                  <li>source code!</li>
+                </ul>
+              </li>
+              <li class="fragment">Know your <s>enemies</s> competitors
+                <ul class="fragment">
+                  <li>and learn good stuff from them</li>
+                  <li>while avoiding bad parts</li>
+                </ul>
+              </li>
+              <li class="fragment">Be open to new stuff
+                <ul class="fragment">
+                  <li>to know and discuss</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section id="lambdas">
+            <h2>Lambdas</h2>
+          </section>
+
+          <section>
+            <blockquote>
+              &quot;Closures feel to me like one of these design Black Holes. (...) So, should we just give in to the force of gravity and go the rest of the way? The debate's afoot. <span class="fragment roll-in">It's going to be an entertaining year.&quot;</span>
+              <footer>- <cite>James Gosling, Java creator - in 2006, on <a href="https://blogs.oracle.com/jag/entry/the_black_hole_theory_of">his blog</a></cite></footer>
+            </blockquote>
+          </section>
+
+          <section>
+            <blockquote>
+              &quot;Java has closures it's just called 'anonymous inner classes' (...). [They] are the better and more 'java-way' to do closures. <span class="fragment highlight-red">Adding an additional syntax for closures will only make the language more complex</span> without solving even one real problem.&quot;
+              <footer>- <cite>Karsten Wagner - in 2006, <a href="http://lambda-the-ultimate.org/node/1684#comment-20528">commenting Java closures proposal</a></cite></footer>
+            </blockquote>
+          </section>
+
+          <section>
+            <p>...and in 2014 (finally) instead of this:</p>
+            <pre><code data-trim>
+List&lt;Album&gt; favs = new ArrayList&lt;&gt;();
+for (Album a : albums) {
+    boolean hasFavorite = false;
+    for (Track t : a.tracks) {
+        if (t.rating &gt;= 4) {
+            hasFavorite = true;
+            break;
+        }
+    }
+    if (hasFavorite) {
+        favs.add(a);
+    }
+}
+Collections.sort(favs, new Comparator&lt;Album&gt;() {
+    @Override public int compare(Album a1, Album a2) {
+        return a1.name.compareTo(a2.name);
+}});
+            </code></pre>
+          </section>
+
+          <section>
+            <p>...you can do this:</p>
+            <pre><code data-trim>
+List&lt;Album&gt; sortedFavs =
+  albums.stream()
+        .filter(a -&gt; a.tracks.anyMatch(t -&gt; (t.rating &gt;= 4)))
+        .sorted(Comparator.comparing(a -&gt; a.name))
+        .collect(Collectors.toList());
+            </code></pre>
+            <p class="fragment">There is more than one way to do it, <span class="fragment highlight-red">finally!</span></p>
+          </section>
+
+          <section>
+            <img src="images/lambdas_everywhere.jpg" alt="Lambdas">
+          </section>
+
         </section>
 
         <section>
           <h1>THE END</h1>
-          <h3>Questions?</h3>
+          <h3 class="fragment">Questions?</h3>
+          <p class="fragment">Please send me a feedback:<br>
+            <a href="https://twitter.com/xaerxess">@xaerxess</a> or xaerxess <code>at</code> gmail <code>dot</code> com</p>
         </section>
 
       </div>
@@ -122,7 +732,7 @@ function linkify( selector ) {
         center: true,
 
         theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
         // Parallax scrolling
         // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
